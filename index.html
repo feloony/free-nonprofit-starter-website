@@ -1,14 +1,178 @@
 ---
 layout: default
 ---
+
+<style>
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #10b981;
+    --accent-hover: #059669;
+    --border-color: #334155;
+  }
+
+  body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .header {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+  }
+
+  .logo-title {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .main-nav .nav-item a {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .main-nav .nav-item a:hover,
+  .main-nav .nav-item.active a {
+    color: var(--accent) !important;
+    background: transparent !important;
+  }
+
+  .main-nav .nav-item a.highlight {
+    background: var(--accent) !important;
+    color: #000000 !important;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 8px 16px;
+  }
+
+  .main-nav .nav-item a.highlight:hover {
+    background: var(--accent-hover) !important;
+    color: #ffffff !important;
+  }
+
+  .section {
+    background-color: var(--bg-primary) !important;
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .title {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    color: var(--accent) !important;
+  }
+
+  .intro {
+    color: var(--text-secondary) !important;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+  }
+
+  .card-minimal {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card-minimal:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .icon-lg {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+
+  .sub-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-accent {
+    background-color: var(--accent);
+    color: #000000 !important;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-accent:hover {
+    background-color: var(--accent-hover);
+    color: #ffffff !important;
+  }
+
+  .btn-outline-dark {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary) !important;
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-outline-dark:hover {
+    border-color: var(--accent);
+    color: var(--accent) !important;
+  }
+
+  .form-control {
+    background-color: var(--bg-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 6px;
+    height: 46px;
+  }
+
+  .form-control:focus {
+    border-color: var(--accent) !important;
+    box-shadow: none;
+  }
+
+  .social-icons li a {
+    color: var(--text-secondary) !important;
+    font-size: 1.3rem;
+    transition: color 0.2s ease;
+  }
+
+  .social-icons li a:hover {
+    color: var(--accent) !important;
+  }
+</style>
+
 <!-- ******HEADER****** -->
-<header id="header" class="header header-minimal">
+<header id="header" class="header">
   <div class="container">
     <h1 class="logo pull-left">
       <a href="/">
         <span class="logo-title">OpenUtility</span>
       </a>
-    </h1><!--//logo-->
+    </h1>
     <nav id="main-nav" class="main-nav navbar-right" role="navigation">
       <div class="navbar-header">
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -16,8 +180,8 @@ layout: default
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button><!--//nav-toggle-->
-      </div><!--//navbar-header-->
+        </button>
+      </div>
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
@@ -26,23 +190,23 @@ layout: default
           <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
           <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
           <li class="nav-item last"><a class="scrollto highlight" href="#donate">Donate</a></li>
-        </ul><!--//nav-->
-      </div><!--//navbar-collapse-->
-    </nav><!--//main-nav-->
+        </ul>
+      </div>
+    </nav>
   </div>
-</header><!--//header-->
+</header>
 
 <!-- ******PROMO HERO****** -->
-<section id="promo" class="promo section offset-header section-minimal">
+<section id="promo" class="promo section offset-header">
   <div class="container text-center">
     <h2 class="title"><span class="highlight">OpenUtility</span></h2>
-    <p class="intro">Open-source tools and infrastructure designed for utility data, analysis, and community automation.</p>
+    <p class="intro">Open-source tools and infrastructure designed for utility data, analysis, and developer tooling.</p>
     <div class="btns">
-      <a class="btn btn-outline btn-outline-medium scrollto" href="#projects">Explore Projects <i class="fa fa-angle-down"></i></a>
+      <a class="btn btn-outline-dark scrollto" href="#projects">Explore Projects <i class="fa fa-angle-down"></i></a>
     </div>
-  </div><!--//container-->
+  </div>
   
-  <div class="social-media">
+  <div class="social-media" style="margin-top: 40px;">
     <div class="info text-center">
       <ul class="social-icons list-inline">
         {% if site.twitter_username %}
@@ -60,27 +224,27 @@ layout: default
       </ul>
     </div>
   </div>
-</section><!--//promo-->
+</section>
 
 <!-- ******ABOUT****** -->
-<section id="about" class="about section section-minimal">
+<section id="about" class="about section">
   <div class="container">
     <h2 class="title text-center">About OpenUtility</h2>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <p class="intro text-center">
-          OpenUtility is dedicated to building transparent, accessible, and high-performance open-source utilities. We empower developers, organizations, and communities with lightweight tools to manage data and streamline utility operations.
+          OpenUtility is dedicated to building transparent, accessible, and high-performance open-source utilities. We empower developers and communities with lightweight software solutions to streamline workflow and data management.
         </p>
       </div>
     </div>
-  </div><!--//container-->
-</section><!--//about-->
+  </div>
+</section>
 
 <!-- ******PROJECT SHOWCASE****** -->
-<section id="projects" class="projects section section-minimal">
+<section id="projects" class="projects section">
   <div class="container">
-    <h2 class="title text-center">Project Showcase</h2>
-    <p class="intro text-center">Explore our open-source tools and utilities</p>
+    <h2 class="title text-center">Projects</h2>
+    <p class="intro text-center">Explore our open-source tools and repositories</p>
     
     <div class="row">
       {% if site.projects %}
@@ -95,51 +259,51 @@ layout: default
             <h3 class="sub-title">{{ project.name }}</h3>
             <p class="desc">{{ project.description }}</p>
             {% if project.url %}
-              <a class="btn btn-cta-secondary" href="{{ project.url }}" target="_blank">View Project</a>
+              <a class="btn btn-accent" href="{{ project.url }}" target="_blank">View Project</a>
             {% endif %}
-          </div><!--//item-inner-->
-        </div><!--//item-->
+          </div>
+        </div>
         {% endfor %}
       {% else %}
-        <!-- Default Minimalist Project Showcase Cards -->
+        <!-- Project Cards -->
+        <div class="col-md-4 col-sm-6 text-center item">
+          <div class="item-inner card-minimal">
+            <i class="fa fa-wrench icon-lg"></i>
+            <h3 class="sub-title">Server Toolkit</h3>
+            <p class="desc">A lightweight suite of server diagnostic tools and network monitoring utilities.</p>
+            <a class="btn btn-outline-dark" href="#" target="_blank">View Repository</a>
+          </div>
+        </div>
+        
         <div class="col-md-4 col-sm-6 text-center item">
           <div class="item-inner card-minimal">
             <i class="fa fa-tachometer icon-lg"></i>
-            <h3 class="sub-title">Utility Monitor</h3>
-            <p class="desc">A lightweight real-time dashboard for metrics aggregation and system utility tracking.</p>
-            <a class="btn btn-outline" href="#" target="_blank">View Repository</a>
-          </div><!--//item-inner-->
-        </div><!--//item-->
+            <h3 class="sub-title">Speed Check</h3>
+            <p class="desc">Client-side network latency and connection speed testing utility.</p>
+            <a class="btn btn-outline-dark" href="#" target="_blank">View Repository</a>
+          </div>
+        </div>
         
         <div class="col-md-4 col-sm-6 text-center item">
           <div class="item-inner card-minimal">
-            <i class="fa fa-terminal icon-lg"></i>
-            <h3 class="sub-title">OpenCLI Tooling</h3>
-            <p class="desc">Command-line utilities engineered for automated deployment, configuration, and data extraction.</p>
-            <a class="btn btn-outline" href="#" target="_blank">View Repository</a>
-          </div><!--//item-inner-->
-        </div><!--//item-->
-        
-        <div class="col-md-4 col-sm-6 text-center item">
-          <div class="item-inner card-minimal">
-            <i class="fa fa-database icon-lg"></i>
-            <h3 class="sub-title">DataSync Core</h3>
-            <p class="desc">High-speed data ingestion and formatting engine for open datasets and telemetry data.</p>
-            <a class="btn btn-outline" href="#" target="_blank">View Repository</a>
-          </div><!--//item-inner-->
-        </div><!--//item-->
+            <i class="fa fa-paint-brush icon-lg"></i>
+            <h3 class="sub-title">Hex Color Picker</h3>
+            <p class="desc">Minimalist color palette generator and hex conversion web utility.</p>
+            <a class="btn btn-outline-dark" href="#" target="_blank">View Repository</a>
+          </div>
+        </div>
       {% endif %}
-    </div><!--//row-->
-  </div><!--//container-->
-</section><!--//projects-->
+    </div>
+  </div>
+</section>
 
 <!-- ******JOIN****** -->
-<section id="join" class="join section section-minimal">
+<section id="join" class="join section">
   <div class="container text-center">
     <h2 class="title">Get Involved</h2>
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <p class="intro">Join the OpenUtility community. Sign up to receive software releases, progress reports, and opportunities to contribute.</p>
+        <p class="intro">Join the OpenUtility ecosystem. Subscribe for updates on new open-source utility releases and tools.</p>
         
         {% if site.tinyletter_username %}
         <div class="row">
@@ -148,7 +312,7 @@ layout: default
               <div class="input-group input-group-lg col-sm-12">
                 <input type="email" class="form-control" name="email" id="tlemail" placeholder="Enter your email address" />
                 <div class="input-group-btn">
-                  <button type="submit" class="button btn btn-cta-secondary">Subscribe</button>
+                  <button type="submit" class="btn btn-accent">Subscribe</button>
                 </div>
               </div>
             </form>
@@ -163,51 +327,46 @@ layout: default
               </div>
               <div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}" tabindex="-1" value=""></div>
               <div class="clear">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-block btn-outline" />
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-accent btn-block" />
               </div>
             </div>
           </form>
         </div>
         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         {% else %}
-        <p class="text-muted"><em>Email signup is currently unavailable. Check back soon.</em></p>
+        <p style="color: var(--text-secondary);"><em>Email subscription updates coming soon.</em></p>
         {% endif %}
       </div>
     </div>
-  </div><!--//container-->
-</section><!--//join-->
+  </div>
+</section>
 
 <!-- ******DONATE****** -->
-<section id="donate" class="donate section text-center section-minimal">
+<section id="donate" class="donate section text-center">
   <div class="container">
     <div class="donate-inner">
-      <h2 class="title text-center">Support OpenUtility</h2>
+      <h2 class="title text-center">Support Us</h2>
       <div class="info">
-        <p class="intro">Help us keep open-source software free, accessible, and continuously maintained.</p>
+        <p class="intro">Help keep open-source tools free, independent, and active.</p>
         {% if site.donorbox_campaign_name %}
           <div class="donorbox text-center">
             <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
           </div>
-          {% if site.is_501c3 == true %}
-            <p class="small text-muted">Contributions are tax-deductible. OpenUtility is a 501(c)(3) organization.</p>
-          {% elsif site.fiscal_sponsor_name %}
-            <p class="small text-muted">OpenUtility is fiscally sponsored by {{ site.fiscal_sponsor_name }}, a 501(c)(3) tax-exempt organization.</p>
-          {% endif %}
         {% else %}
-        <p class="text-muted">Online donations are currently offline.</p>
+        <p style="color: var(--text-secondary);">Online donations are currently offline.</p>
         {% endif %}
-      </div><!--//info-->
-    </div><!--//donate-inner-->
-  </div><!--//container-->
-</section><!--//donate-->
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ******CONTACT****** -->
-<section id="contact" class="contact section section-minimal">
+<section id="contact" class="contact section">
   <div class="container">
     <div class="contact-inner">
       <h2 class="title text-center">Contact</h2>
-      <address class="text-center">
-        <strong>OpenUtility</strong><br>
+      <address class="text-center" style="color: var(--text-secondary);">
+        <strong style="color: var(--text-primary);">OpenUtility</strong><br>
         {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
         {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
         {% if site.org_phone %}
@@ -217,20 +376,20 @@ layout: default
       <div class="clearfix"></div>
       <div class="info text-center">
         <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto:{{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
-      </div><!--//info-->
-    </div><!--//contact-inner-->
-  </div><!--//container-->
-</section><!--//contact-->
+          {% if site.twitter_username %}
+          <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          {% endif %}
+          {% if site.instagram_username %}
+          <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
+          {% endif %}
+          {% if site.org_general_email_inbox %}
+          <li class="last"><a href="mailto:{{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
